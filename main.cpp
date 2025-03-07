@@ -22,8 +22,7 @@ int main() {
     }();
     std::vector<double> y = [&]() {
         std::vector<double> gen{};
-        for (int i=0; i<x.size(); i++) {
-            const double time = x[i];
+        for (double time : x) {
             double population = init_population * pow(M_E, (effective_rate*time)); // P=Ce^(rt)
 
             gen.push_back(population); // y=Pe^(rt)
