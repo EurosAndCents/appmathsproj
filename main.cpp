@@ -6,7 +6,7 @@ int main() {
     using namespace matplot;
 
     // Variables
-    constexpr double K_init_population{1000}; // Assume a deer population of 1000 (red deer, fallow deer, sika deer) -> each give birth to ~1 fawn per year
+    constexpr double K_init_population{135000}; // Estimations online say 120k-150k, so assume 135k
     constexpr double K_fidelity{0.01f}; // Fidelity of the graph
 
     constexpr double K_birth_rate{0.5*0.5}; // Assume 50% are female, and 50% giving birth each year
