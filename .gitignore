@@ -1,0 +1,37 @@
+# CLion specific
+.idea/
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/
+
+# CMake specific
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# Backup files
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
+
+# Matplot++ specific
+*.dat
