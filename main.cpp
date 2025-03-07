@@ -8,15 +8,14 @@ int main() {
     // Generate data
     std::vector<double> x = []() {
         std::vector<double> gen{};
-        for (int i=0; i<1*100; i++) {
-            gen.push_back(i*0.01);
-        }
+        for (int i=0; i<1*1000; i++)
+            gen.push_back(i*0.01); // X should not be touched - determines the "fidelity" of the graph
         return gen;
     }();
     std::vector<double> y = [&]() {
         std::vector<double> gen{};
         for (auto i : x) {
-            gen.push_back(std::sin(i*2*pi));
+            gen.push_back(std::sin(i)); // Straight line: y=x
         }
         return gen;
     }();
@@ -25,7 +24,7 @@ int main() {
 
     // Create plot
     plot(x, y);
-    title("Population Model");
+    title("Deer Population Model");
     xlabel("Years");
     ylabel("Population");
 
