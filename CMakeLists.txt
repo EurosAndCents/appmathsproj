@@ -4,7 +4,10 @@ project(appmathsproj)
 set(CMAKE_CXX_STANDARD 20)
 
 # Create the executable target
-add_executable(appmathsproj main.cpp)
+add_executable(appmathsproj main.cpp
+        line_plot.cpp
+        line_plot.h
+        constants.h)
 
 # Specify the include directory for MatPlot++
 target_include_directories(appmathsproj PRIVATE /usr/local/Cellar/matplotplusplus/1.2.2/include)
