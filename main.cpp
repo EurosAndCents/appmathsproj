@@ -5,10 +5,12 @@
 #include <fstream>
 #include <ctime>
 
+#include "constants.h"
+
 int main() {
     using namespace matplot;
 
-    // Create plot + datablock
+    // Create plot
     auto fig = figure();
     auto axes = fig->current_axes();
     axes->hold(true);
@@ -16,15 +18,17 @@ int main() {
     axes->xlabel("Years");
     axes->ylabel("Population");
 
-    // Create and plot 20 line_plot objs
+    // Generate lines
     unsigned time_total{0};
-    for (unsigned i=0, time, time_total_local; i<20; i++) {
+    for (unsigned i=0, time, time_total_local; i<10; i++) {
         std::cout << "Plotting line " << i+1 << std::endl;
         time = std::time(nullptr);
 
+        // Create lines
         popmodel::line_plot line;
         line.popmodel::line_plot::plot(axes);
 
+        // Time debug info
         time_total_local = std::time(nullptr)-time;
         std::cout << "Line " << i+1 << " plotted";
         std::cout << " in " << time_total_local << "s" << std::endl;
