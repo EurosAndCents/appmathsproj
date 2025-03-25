@@ -10,6 +10,11 @@ namespace popmodel {
     public:
         line_plot();
 
+        // Member variables
+        std::vector<double> x, // Time (years, each value is 0.01 (K_fidelity) years)
+        y, // Current population of deer
+        er; // Effective rate, for debugging purposes
+
         // Functionality
         void plot(const matplot::axes_handle& axes) const; // Plot the line graph, requires axes_handle to plot on
     private:
@@ -17,9 +22,6 @@ namespace popmodel {
         void generate_values();
 
         // Member variables
-        std::vector<double> x; // Time (years, each value is 0.01 (K_fidelity) years)
-        std::vector<double> y; // Current population of deer
-
         double effective_rate_; // Effective rate of population growth (birth rate - death rate)
         double current_birth_rate_, current_death_rate_;
 
