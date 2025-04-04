@@ -19,8 +19,8 @@ namespace popmodel::constants {
     constexpr double K_death_rate_hunting{0.3f}; // Assume 30% die during hunting season (50k/135k)
     constexpr double K_death_bound_hunting{0.2f}; // Added to the current stochasticism of the death rate during hunting season (EXPERIMENTAL)
 
-    constexpr double K_death_bound{0.3f}; // The bound of variability that can be added to the death rate
-    constexpr double K_birth_bound{0.8f}; // The bound of variability that can be added to the birth rate
+    constexpr double K_death_bound{0.1f}; // The bound of variability that can be added to the death rate
+    constexpr double K_birth_bound{0.9f}; // The bound of variability that can be added to the birth rate
 }
 
 namespace popmodel {
